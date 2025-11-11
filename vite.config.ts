@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  root: 'public', // serve index.html from public folder
+  root: 'public',
   build: {
-    outDir: '../dist', // build output folder
+    outDir: '../dist',
     emptyOutDir: true,
     rollupOptions: {
       input: '/index.html',
