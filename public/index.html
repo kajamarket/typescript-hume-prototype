@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Hume EVI Minimal App</title>
+  <title>Hume EVI App</title>
+  <style>
+    body { font-family: Arial, sans-serif; max-width: 600px; margin: 2rem auto; }
+    button { margin: 0.5rem; padding: 0.5rem 1rem; font-size: 16px; }
+    #status { margin: 1rem 0; }
+    #transcript { border: 1px solid #ccc; padding: 1rem; height: 200px; overflow-y: auto; }
+    .listening { color: green; font-weight: bold; }
+    .idle { color: gray; font-weight: bold; }
+    .connected { color: green; }
+    .disconnected { color: red; }
+  </style>
 </head>
 <body>
-  <h1>Talk to EVI</h1>
-  <button id="start">Start Conversation</button>
-  <button id="stop">Stop Conversation</button>
+  <h1>Hume EVI Voice App</h1>
+  <div>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+  </div>
+  <div id="status">
+    <span>Connection: <span id="connection-status">disconnected</span></span> | 
+    <span>Microphone: <span id="mic-status">idle</span></span>
+  </div>
+  <div id="transcript"></div>
 
   <script type="module" src="/src/app.ts"></script>
 </body>
