@@ -1,5 +1,4 @@
 // src/types.ts
-
 export type AppState = 'idle' | 'listening' | 'playing' | 'interrupted';
 export type ConnectionState = 'connecting' | 'connected' | 'disconnected';
 
