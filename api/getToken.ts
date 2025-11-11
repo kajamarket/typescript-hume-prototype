@@ -4,10 +4,9 @@ import { HumeClient } from 'hume';
 export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const client = new HumeClient({
-      apiKey: process.env.HUME_API_KEY, // stored in Vercel environment
+      apiKey: process.env.HUME_API_KEY,
     });
 
-    // Generate a temporary token (recommended for browser usage)
     const tokenInfo = await client.getEviToken({ configId: 'default' });
     res.status(200).json(tokenInfo);
   } catch (err) {
